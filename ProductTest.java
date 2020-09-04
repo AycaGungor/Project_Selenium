@@ -53,3 +53,7 @@ public class ProductTest {
         ProductTest.LoginButton(driver).click();
 
         driver.quit();
+
+     }
+
+}
