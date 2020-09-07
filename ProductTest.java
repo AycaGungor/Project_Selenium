@@ -38,7 +38,21 @@ public class ProductTest {
         String expectedUrl= driver.getCurrentUrl();
         Assert.assertEquals(expectedUrl,actualUrl); }   }
 
-        driver.findElement(By.id("search-box")).sendKeys("bilgisayar").click();
+        
+         @Test
+
+
+          public void testProductSearch() {
+             WebElement searchElement = driver.findElement(By.className("search-box"));
+             searchElement.sendKeys("iPhone");
+             searchProduct(driver, By.className("search-icon"));
+
+         }
+
+    private void searchProduct(WebDriver driver, By by) {
+        driver.findElement(by).click();driver.quit();
+    }
+
 
         WebElement loginLink = driver.findElement(By.linkText("Login"));
 
